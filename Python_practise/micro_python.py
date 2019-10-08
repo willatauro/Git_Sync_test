@@ -37,3 +37,27 @@ last_name = 'Tauro'
 #print(int(first_num)+int(second_nm))
 # print(float(first_num)+float(second_nm))
 
+
+### Dates 
+
+from datetime import datetime, timedelta 
+
+# current_Date  = datetime.now()
+
+# print('Today is: ' + str(current_Date))
+
+# today = datetime.now()
+# one_day = timedelta(days=1)
+# yesterday = today - one_day
+# print(yesterday)
+
+# print('day'+ str(today.day))
+
+#### convert string to date 
+
+birthday = input('when is your birthday(dd/mm/yyyy)')
+
+birthday_date = datetime.strptime(birthday,'%d/%m/%Y')
+
+print('birthday: '+str(birthday_date))
+
