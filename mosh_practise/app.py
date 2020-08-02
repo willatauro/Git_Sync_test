@@ -176,15 +176,86 @@ while i>0:
     i-=1
 print("Done")
 
-'''
 
-
-i=3
-while i>0:
-    num= int(input("Guess: "))
-    if num==9:
+secret_number = 9
+guess_count = 0
+guess_limit =3
+ 
+while guess_count<guess_limit:
+    guess= int(input("Guess: "))
+    if guess==secret_number:
         print("You win!")
         break
-    i=i-1
-if num!=9:
+    guess_count=guess_count+1
+else:  
     print("sorry you failed")
+
+
+command = input("> ")
+
+if command.lower()=="help":
+    print("Start - to start the car")
+    print("Stop - to stop the car")
+    print("quit - to exit")
+
+    option = input("> ")
+
+    if option.lower()=="start":
+        print("car started...Ready to go")
+    if option.lower()=="stop":
+        print("CAr stopped.")
+    if option.lower()=="quit":
+        exit()
+else:
+    print("I don't understand that...")
+ 
+
+### u can also use boolean
+command = ""
+i=0
+j=0
+while True:
+    command = input("> ").lower()
+
+    if command =="start" and i==0:
+        print("car started...Ready to go")
+        i=i+1
+    elif command =="start" and i>=1:
+        print("car is already started")
+    elif command =="stop" and j==0:
+        print("CAr stopped.")
+        i=0
+        j+=1
+    elif command=="stop" and j>=1:
+        print("Car already stopped")
+        j=0
+    elif command =="help":
+        print(""" 
+        Start - to start the car
+        stop - to stop car
+        quit
+        
+        """)
+    elif command =="quit":
+        break
+    else:
+        print("I dont understand")
+
+
+         
+
+# For loops
+
+for item in 'Python':
+    print(item)
+
+for item in range(10):
+    print(item)
+
+    '''
+
+prices = [10,20,30]
+sum = 0
+for item in prices:
+    sum = sum + item
+print(sum)
