@@ -322,7 +322,7 @@ for number in numbers:
     if number not in unique:
         unique.append(number)
 print(unique)
-'''
+
 
 ## tuple
 
@@ -336,3 +336,25 @@ print(x)
 print(y)
 print(z)
  
+
+customer ={
+"name":"Wilander"
+"age":32
+
+
+}
+'''
+
+phone = input("Enter the phone number ")
+
+ph_dict = { "1":"one","2":"Two","3":"three"}
+
+ph_list =""
+for number in phone:
+
+    ph_list+= ph_dict.get(number,"!") +" "
+        #print(ph_list)
+print(ph_list)
+
+        #2.26
+
