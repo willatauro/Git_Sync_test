@@ -252,10 +252,87 @@ for item in 'Python':
 for item in range(10):
     print(item)
 
-    '''
+    
 
 prices = [10,20,30]
 sum = 0
 for item in prices:
     sum = sum + item
 print(sum)
+ 
+
+for x in range(4):
+    for y in range(4):
+        print(f'({x},{y})')
+
+
+
+
+numbers = [1,1,1,1,5]
+
+#for number in numbers:
+    #print("x"*number) 
+
+for number in numbers:
+    output=''
+    for count in range(number):
+        output+='x'
+    print(output)
+
+
+### how to find maximum number in the list
+numbers =[20,10,100,40]
+max = numbers[0]
+for number in numbers:
+    if number > max:
+        max= number
+print(max)
+
+
+#Two dimensional list
+
+matrix = [[1,2,3], [4,5,6],[7,8,9]]
+
+print(matrix)
+for row in matrix:
+    for item in row:
+        print(item)
+ 
+ 
+
+numbers = [5,3,1,7,4]
+
+numbers.append(10)
+print(numbers)
+
+numbers.insert(0,30)
+print(numbers)
+print(numbers.index(10))
+ 
+
+numbers.pop()
+
+numbers.clear()
+
+
+# To remove duplicates from a list
+numbers = [10,30,10,20,20]
+unique =[]
+for number in numbers:
+    if number not in unique:
+        unique.append(number)
+print(unique)
+'''
+
+## tuple
+
+coordinates = (1,2,3)
+x= coordinates[0]
+y= coordinates[1]
+z= coordinates[2]
+x,y,z= coordinates  ## unpacking
+
+print(x)
+print(y)
+print(z)
+ 
