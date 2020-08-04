@@ -343,7 +343,7 @@ customer ={
 
 
 }
-'''
+
 
 phone = input("Enter the phone number ")
 
@@ -356,5 +356,125 @@ for number in phone:
         #print(ph_list)
 print(ph_list)
 
-        #2.26
+
+
+message = input(">")
+
+words= message.split(' ') 
+
+print(words)
+
+emojis= {
+":)": "smile",
+":(":"sad"
+
+}
+
+output =""
+
+for word in words:
+    output+=emojis.get(word, word) + " "
+
+print(output)
+
+#Functions
+
+def greet_user(name):
+    print(f"Good Morning {name}")
+    print("Welcome aboard")
+
+
+print("start")
+greet_user("Wilander")
+print("finish")
+
+def square(side):
+    return side*side
+
+print(square(5))
+
+message = input(">")
+
+def emojis_fun(message):
+    words = message.split(" ")
+    emoji={
+        ":)":"smile",
+        "(": "sad"
+    }
+    output=""
+    for word in words:
+        output+=emoji.get(word,word) + " "
+    return output
+
+print(emojis_fun(message))
+
+
+try:
+    age =int(input('Age: '))
+    income = 10000
+    risk = income/age
+    print(age)
+except ValueError:
+    print("invalid value")
+except ZeroDivision: 
+    print("age not zero")
+
+
+
+class Point:
+
+    def __init__(self, x, y):
+        self.x =x
+        self.y =y 
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+
+point1 = Point(10,20)
+point1.move()
+point1.draw()
+#point1.x = 10   ## attributes of point1
+#point1.y= 20
+print(point1.x)
+
+
+class Person:
+
+    def __init__(self,name):
+        self.name = name
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+p = Person("wilander")
+print(p.name)
+p.talk()
+
+
+class Mammal:
+    def walk(self):
+        print("walk")
+class Dog(Mammal):
+    def bark(self):
+        print("bark")
+class Cat(Mammal):
+    def annoying(self):
+        print ("annoying")
+
+d= Dog()
+d.walk()
+d.bark()
+
+
+
+import converters
+print(converters.kgs_to_lbs(50))
+
+
+from converters import kgs_to_lbs
+print(kgs_to_lbs(50))
+'''
+
+#3.25.22
 
