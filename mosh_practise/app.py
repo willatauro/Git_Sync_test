@@ -474,7 +474,52 @@ print(converters.kgs_to_lbs(50))
 
 from converters import kgs_to_lbs
 print(kgs_to_lbs(50))
-'''
+
 
 #3.25.22
 
+from utils import find_maximum
+
+print(find_maximum([12,99,80]))
+
+
+#import ecommerce.shipping 
+
+#from ecommerce.shipping import calculate_shipping 
+
+from ecommerce import shipping 
+
+shipping.calculate_shipping()
+
+
+import random
+
+for i in range(3):
+    print(random.randint(10,20))
+
+  
+## program to roll a dice
+import random
+
+class Dice:
+    def roll(self):
+        first = random.randint(1,6)
+        second = random.randint(1,6)
+        return first, second
+Dice = Dice()
+print(Dice.roll())
+  
+from pathlib import Path
+path = Path('ecommerce')
+print(path.exists())
+
+
+from pathlib import Path
+path = Path()
+
+for file in path.glob('*'):
+    print(file)
+
+'''
+
+#3.59
