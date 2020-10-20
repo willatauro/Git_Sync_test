@@ -9,8 +9,7 @@ else
 {
     print "not matched";
 }
-=end
-=cut
+
 
 while(<STDIN>)
 {
@@ -23,4 +22,27 @@ while(<STDIN>)
     {
         print "not matched"
     }
+}
+
+
+
+$_ ="abba";
+if(/(.)\1/)
+{
+    print "it matched"
+}
+
+
+$_ ="yabba dabba doo";
+if(/y(.)(.)\2\1/)
+{
+    print "it matched"
+}
+=end
+=cut
+
+$_ ="yabba dabba doo";
+if(/y((.)(.)\3\2) d\1/)
+{
+    print "it matched"
 }
